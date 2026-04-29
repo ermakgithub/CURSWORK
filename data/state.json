@@ -1,0 +1,40 @@
+{
+  "trucks": [
+    {
+      "id": "TRK-001",
+      "name": "Alpha",
+      "fuelCapacity": 120
+    },
+    {
+      "id": "TRK-002",
+      "name": "Beta",
+      "fuelCapacity": 80
+    }
+  ],
+  "destinations": [
+    {
+      "id": "DST-001",
+      "name": "North Gate",
+      "distance": 15,
+      "material": "A"
+    },
+    {
+      "id": "DST-002",
+      "name": "South Hub",
+      "distance": -12,
+      "material": "B"
+    },
+    {
+      "id": "DST-003",
+      "name": "West Point",
+      "distance": 23,
+      "material": "C"
+    },
+    {
+      "id": "DST-004",
+      "name": "East Depot",
+      "distance": -30,
+      "material": "D"
+    }
+  ]
+}

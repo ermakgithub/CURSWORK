@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logistics Routing App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Logistics Routing Web Application</h1>
+
+    <section class="card">
+      <label for="truckSelect">Truck</label>
+      <select id="truckSelect"></select>
+
+      <p class="label">Destinations</p>
+      <div id="destinationsContainer" class="checkbox-grid"></div>
+
+      <label for="materialSelect">Material</label>
+      <div class="row">
+        <select id="materialSelect">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+        <button id="addByMaterialBtn">Add by Material</button>
+      </div>
+
+      <label for="fuelProgress">Fuel Needed</label>
+      <progress id="fuelProgress" max="100" value="0"></progress>
+      <div id="fuelLabel" class="muted">0%</div>
+
+      <div class="row">
+        <button id="sendBtn">Send</button>
+        <button id="addTruckBtn">Add Truck</button>
+        <button id="addDestinationBtn">Add Destination</button>
+        <button id="truckStatusBtn">Truck Status</button>
+      </div>
+
+      <label for="logsOutput">Output / Session Logs</label>
+      <textarea id="logsOutput" rows="8" readonly></textarea>
+    </section>
+  </main>
+
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h2 id="modalTitle">Message</h2>
+      <p id="modalMessage"></p>
+      <div class="row right">
+        <button id="modalOkBtn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="addTruckOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h2>Add Truck</h2>
+      <label for="truckNameInput">Name</label>
+      <input id="truckNameInput" type="text" />
+      <label for="truckFuelInput">Fuel Capacity</label>
+      <input id="truckFuelInput" type="number" step="0.1" />
+      <div class="row right">
+        <button id="truckAddConfirmBtn">Add</button>
+        <button id="truckAddCancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="addDestinationOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h2>Add Destination</h2>
+      <label for="destNameInput">Name</label>
+      <input id="destNameInput" type="text" />
+      <label for="destDistanceInput">Distance</label>
+      <input id="destDistanceInput" type="number" step="0.1" />
+      <label for="destMaterialInput">Material</label>
+      <select id="destMaterialInput">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+      </select>
+      <div class="row right">
+        <button id="destAddConfirmBtn">Add</button>
+        <button id="destAddCancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="truckStatusOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h2>Truck Status</h2>
+      <label for="statusTruckSelect">Truck</label>
+      <select id="statusTruckSelect"></select>
+      <label for="statusProgress">Fuel Usage for Full Theoretical Route</label>
+      <progress id="statusProgress" max="100" value="0"></progress>
+      <textarea id="statusText" rows="6" readonly></textarea>
+      <div class="row right">
+        <button id="statusOkBtn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+services:
+  logistics-app:
+    build: .
+    container_name: logistics-routing-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped

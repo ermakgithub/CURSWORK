@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f7fb;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+label,
+.label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+select,
+input,
+button,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+}
+
+button {
+  cursor: pointer;
+  background: #2364d2;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background: #1b4ca0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.right {
+  grid-template-columns: repeat(2, minmax(100px, 130px));
+  justify-content: end;
+}
+
+.checkbox-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f4fa;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+progress {
+  width: 100%;
+  height: 18px;
+}
+
+.muted {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  max-width: 460px;
+  width: 90%;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.hidden {
+  display: none;
+}
