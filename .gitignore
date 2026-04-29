@@ -1,0 +1,14 @@
+# Скомпилированные файлы Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+# Логи и временные данные
+logs/*.txt
+data/state.json
+
+# Docker
+.dockerignore
